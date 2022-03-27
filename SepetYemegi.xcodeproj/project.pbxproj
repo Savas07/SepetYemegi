@@ -21,6 +21,8 @@
 		DC376D7627EC998C00B3432C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7527EC998C00B3432C /* Alamofire */; };
 		DC376D7927EC9A3E00B3432C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7827EC9A3E00B3432C /* Kingfisher */; };
 		DC376D7B27EC9ACD00B3432C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */; };
+		DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */; };
+		DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441327F0B7A900BD7EB6 /* GradientView.swift */; };
 		DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC52F27EE26090032EAF8 /* MyTextField.swift */; };
 		DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */; };
 		DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */; };
@@ -58,6 +60,8 @@
 		DC376D6027EC938600B3432C /* SepetYemegiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITests.swift; sourceTree = "<group>"; };
 		DC376D6227EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerScreenVC.swift; sourceTree = "<group>"; };
+		DC90441327F0B7A900BD7EB6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DCDDC52F27EE26090032EAF8 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenVC.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				DC376D3E27EC938300B3432C /* SepetYemegi */,
+				DCDDC53127EF534B0032EAF8 /* entity */,
 				DC376D5527EC938600B3432C /* SepetYemegiTests */,
 				DC376D5F27EC938600B3432C /* SepetYemegiUITests */,
 				DC376D3D27EC938300B3432C /* Products */,
@@ -119,6 +124,7 @@
 				DC376D4127EC938300B3432C /* SceneDelegate.swift */,
 				DC376D7C27EC9F6700B3432C /* LoginScreen-module */,
 				DCDDC53627EF59460032EAF8 /* RegisterScreen-module */,
+				DC90440D27F0ABAD00BD7EB6 /* UrunlerScreen-module */,
 				DC376D4827EC938600B3432C /* Assets.xcassets */,
 				DC376D4527EC938300B3432C /* Main.storyboard */,
 				DC376D4A27EC938600B3432C /* LaunchScreen.storyboard */,
@@ -153,7 +159,6 @@
 				DC376D7F27EC9FAA00B3432C /* presenter */,
 				DC376D7E27EC9FA200B3432C /* interactor */,
 				DC376D7D27EC9F9400B3432C /* protocols */,
-				DCDDC53127EF534B0032EAF8 /* entity */,
 			);
 			path = "LoginScreen-module";
 			sourceTree = "<group>";
@@ -194,11 +199,60 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		DC90440D27F0ABAD00BD7EB6 /* UrunlerScreen-module */ = {
+			isa = PBXGroup;
+			children = (
+				DC90441227F0ABDB00BD7EB6 /* view */,
+				DC90441127F0ABD100BD7EB6 /* interactor */,
+				DC90441027F0ABCB00BD7EB6 /* router */,
+				DC90440F27F0ABC100BD7EB6 /* presenter */,
+				DC90440E27F0ABBB00BD7EB6 /* protocols */,
+			);
+			path = "UrunlerScreen-module";
+			sourceTree = "<group>";
+		};
+		DC90440E27F0ABBB00BD7EB6 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DC90440F27F0ABC100BD7EB6 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		DC90441027F0ABCB00BD7EB6 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		DC90441127F0ABD100BD7EB6 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		DC90441227F0ABDB00BD7EB6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		DCDDC53127EF534B0032EAF8 /* entity */ = {
 			isa = PBXGroup;
 			children = (
 				DCDDC52F27EE26090032EAF8 /* MyTextField.swift */,
 				DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */,
+				DC90441327F0B7A900BD7EB6 /* GradientView.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -396,9 +450,11 @@
 			files = (
 				DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */,
 				DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */,
+				DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */,
 				DC376D4227EC938300B3432C /* SceneDelegate.swift in Sources */,
 				DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */,
 				DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */,
+				DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */,
 				DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
