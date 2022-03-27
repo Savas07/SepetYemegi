@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D3F27EC938300B3432C /* AppDelegate.swift */; };
 		DC376D4227EC938300B3432C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D4127EC938300B3432C /* SceneDelegate.swift */; };
-		DC376D4427EC938300B3432C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D4327EC938300B3432C /* ViewController.swift */; };
+		DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D4327EC938300B3432C /* LoginScreenVC.swift */; };
 		DC376D4727EC938300B3432C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC376D4527EC938300B3432C /* Main.storyboard */; };
 		DC376D4927EC938600B3432C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC376D4827EC938600B3432C /* Assets.xcassets */; };
 		DC376D4C27EC938600B3432C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC376D4A27EC938600B3432C /* LaunchScreen.storyboard */; };
 		DC376D5727EC938600B3432C /* SepetYemegiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D5627EC938600B3432C /* SepetYemegiTests.swift */; };
 		DC376D6127EC938600B3432C /* SepetYemegiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D6027EC938600B3432C /* SepetYemegiUITests.swift */; };
 		DC376D6327EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC376D6227EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift */; };
+		DC376D7127EC98CC00B3432C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7027EC98CC00B3432C /* FirebaseAuth */; };
+		DC376D7327EC98CC00B3432C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7227EC98CC00B3432C /* FirebaseDatabase */; };
+		DC376D7627EC998C00B3432C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7527EC998C00B3432C /* Alamofire */; };
+		DC376D7927EC9A3E00B3432C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7827EC9A3E00B3432C /* Kingfisher */; };
+		DC376D7B27EC9ACD00B3432C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */; };
+		DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC52F27EE26090032EAF8 /* MyTextField.swift */; };
+		DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */; };
+		DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 		DC376D3C27EC938300B3432C /* SepetYemegi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetYemegi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC376D3F27EC938300B3432C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC376D4127EC938300B3432C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC376D4327EC938300B3432C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC376D4327EC938300B3432C /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
 		DC376D4627EC938300B3432C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC376D4827EC938600B3432C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC376D4B27EC938600B3432C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		DC376D5C27EC938600B3432C /* SepetYemegiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SepetYemegiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC376D6027EC938600B3432C /* SepetYemegiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITests.swift; sourceTree = "<group>"; };
 		DC376D6227EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DCDDC52F27EE26090032EAF8 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC376D7927EC9A3E00B3432C /* Kingfisher in Frameworks */,
+				DC376D7627EC998C00B3432C /* Alamofire in Frameworks */,
+				DC376D7327EC98CC00B3432C /* FirebaseDatabase in Frameworks */,
+				DC376D7127EC98CC00B3432C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +117,13 @@
 			children = (
 				DC376D3F27EC938300B3432C /* AppDelegate.swift */,
 				DC376D4127EC938300B3432C /* SceneDelegate.swift */,
-				DC376D4327EC938300B3432C /* ViewController.swift */,
-				DC376D4527EC938300B3432C /* Main.storyboard */,
+				DC376D7C27EC9F6700B3432C /* LoginScreen-module */,
+				DCDDC53627EF59460032EAF8 /* RegisterScreen-module */,
 				DC376D4827EC938600B3432C /* Assets.xcassets */,
+				DC376D4527EC938300B3432C /* Main.storyboard */,
 				DC376D4A27EC938600B3432C /* LaunchScreen.storyboard */,
 				DC376D4D27EC938600B3432C /* Info.plist */,
+				DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */,
 			);
 			path = SepetYemegi;
 			sourceTree = "<group>";
@@ -127,6 +145,112 @@
 			path = SepetYemegiUITests;
 			sourceTree = "<group>";
 		};
+		DC376D7C27EC9F6700B3432C /* LoginScreen-module */ = {
+			isa = PBXGroup;
+			children = (
+				DC376D8127EC9FC100B3432C /* view */,
+				DC376D8027EC9FBA00B3432C /* router */,
+				DC376D7F27EC9FAA00B3432C /* presenter */,
+				DC376D7E27EC9FA200B3432C /* interactor */,
+				DC376D7D27EC9F9400B3432C /* protocols */,
+				DCDDC53127EF534B0032EAF8 /* entity */,
+			);
+			path = "LoginScreen-module";
+			sourceTree = "<group>";
+		};
+		DC376D7D27EC9F9400B3432C /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DC376D7E27EC9FA200B3432C /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		DC376D7F27EC9FAA00B3432C /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		DC376D8027EC9FBA00B3432C /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		DC376D8127EC9FC100B3432C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DC376D4327EC938300B3432C /* LoginScreenVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DCDDC53127EF534B0032EAF8 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				DCDDC52F27EE26090032EAF8 /* MyTextField.swift */,
+				DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		DCDDC53627EF59460032EAF8 /* RegisterScreen-module */ = {
+			isa = PBXGroup;
+			children = (
+				DCDDC53A27EF5A8E0032EAF8 /* view */,
+				DCDDC53927EF5A850032EAF8 /* router */,
+				DCDDC53827EF5A7C0032EAF8 /* presenter */,
+				DCDDC53727EF5A6F0032EAF8 /* interactor */,
+				DCDDC53B27EF5A990032EAF8 /* protocols */,
+			);
+			path = "RegisterScreen-module";
+			sourceTree = "<group>";
+		};
+		DCDDC53727EF5A6F0032EAF8 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		DCDDC53827EF5A7C0032EAF8 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		DCDDC53927EF5A850032EAF8 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		DCDDC53A27EF5A8E0032EAF8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DCDDC53B27EF5A990032EAF8 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +267,12 @@
 			dependencies = (
 			);
 			name = SepetYemegi;
+			packageProductDependencies = (
+				DC376D7027EC98CC00B3432C /* FirebaseAuth */,
+				DC376D7227EC98CC00B3432C /* FirebaseDatabase */,
+				DC376D7527EC998C00B3432C /* Alamofire */,
+				DC376D7827EC9A3E00B3432C /* Kingfisher */,
+			);
 			productName = SepetYemegi;
 			productReference = DC376D3C27EC938300B3432C /* SepetYemegi.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +345,11 @@
 				Base,
 			);
 			mainGroup = DC376D3327EC938300B3432C;
+			packageReferences = (
+				DC376D6F27EC98CC00B3432C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DC376D7427EC998B00B3432C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DC376D7727EC9A3E00B3432C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DC376D3D27EC938300B3432C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +369,7 @@
 				DC376D4C27EC938600B3432C /* LaunchScreen.storyboard in Resources */,
 				DC376D4927EC938600B3432C /* Assets.xcassets in Resources */,
 				DC376D4727EC938300B3432C /* Main.storyboard in Resources */,
+				DC376D7B27EC9ACD00B3432C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC376D4427EC938300B3432C /* ViewController.swift in Sources */,
+				DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */,
 				DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */,
 				DC376D4227EC938300B3432C /* SceneDelegate.swift in Sources */,
+				DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */,
+				DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */,
+				DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +743,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC376D6F27EC98CC00B3432C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DC376D7427EC998B00B3432C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DC376D7727EC9A3E00B3432C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC376D7027EC98CC00B3432C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC376D6F27EC98CC00B3432C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DC376D7227EC98CC00B3432C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC376D6F27EC98CC00B3432C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		DC376D7527EC998C00B3432C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC376D7427EC998B00B3432C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DC376D7827EC9A3E00B3432C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC376D7727EC9A3E00B3432C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC376D3427EC938300B3432C /* Project object */;
 }
