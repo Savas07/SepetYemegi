@@ -11,10 +11,11 @@ class LoginScreenVC: UIViewController {
     @IBOutlet weak var mailTextField: MyTextField!
     @IBOutlet weak var pwdTextField: MyTextField!
     
-    var kullaniciAdi:String?
+    var kullanici:Kullanici?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +27,7 @@ class LoginScreenVC: UIViewController {
                 var message: String = ""
                 if (success) {
                     message = "User was sucessfully logged in."
-                    self.kullaniciAdi = email
+                    self.kullanici?.kullaniciAd = email
                     self.performSegue(withIdentifier: "toUrunler", sender: nil)
                 } else {
                     message = "There was an error."
@@ -49,7 +50,7 @@ class LoginScreenVC: UIViewController {
         if segue.identifier == "toUrunler"{
             
             let controller = segue.destination as! UrunlerScreenVC
-            controller.kullaniciAdi = kullaniciAdi
+            controller.kullaniciAdi = kullanici?.kullaniciAd
 //            controller.navigationController?.isNavigationBarHidden = true
 //            controller.navigationItem .setHidesBackButton(true, animated: false)
         }

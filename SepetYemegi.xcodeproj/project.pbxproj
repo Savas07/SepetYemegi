@@ -21,8 +21,12 @@
 		DC376D7627EC998C00B3432C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7527EC998C00B3432C /* Alamofire */; };
 		DC376D7927EC9A3E00B3432C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7827EC9A3E00B3432C /* Kingfisher */; };
 		DC376D7B27EC9ACD00B3432C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */; };
+		DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */; };
 		DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */; };
 		DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441327F0B7A900BD7EB6 /* GradientView.swift */; };
+		DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441527F1E3F100BD7EB6 /* Kullanici.swift */; };
+		DC90441827F1E95700BD7EB6 /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441727F1E95600BD7EB6 /* Yemekler.swift */; };
+		DC90441A27F1EBF600BD7EB6 /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */; };
 		DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC52F27EE26090032EAF8 /* MyTextField.swift */; };
 		DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */; };
 		DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */; };
@@ -60,8 +64,12 @@
 		DC376D6027EC938600B3432C /* SepetYemegiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITests.swift; sourceTree = "<group>"; };
 		DC376D6227EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerScreenVC.swift; sourceTree = "<group>"; };
 		DC90441327F0B7A900BD7EB6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		DC90441527F1E3F100BD7EB6 /* Kullanici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kullanici.swift; sourceTree = "<group>"; };
+		DC90441727F1E95600BD7EB6 /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
+		DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
 		DCDDC52F27EE26090032EAF8 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenVC.swift; sourceTree = "<group>"; };
@@ -199,9 +207,18 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		DC815C1327F1F50D00D4A009 /* collectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */,
+			);
+			path = collectionViewCell;
+			sourceTree = "<group>";
+		};
 		DC90440D27F0ABAD00BD7EB6 /* UrunlerScreen-module */ = {
 			isa = PBXGroup;
 			children = (
+				DC815C1327F1F50D00D4A009 /* collectionViewCell */,
 				DC90441227F0ABDB00BD7EB6 /* view */,
 				DC90441127F0ABD100BD7EB6 /* interactor */,
 				DC90441027F0ABCB00BD7EB6 /* router */,
@@ -253,6 +270,9 @@
 				DCDDC52F27EE26090032EAF8 /* MyTextField.swift */,
 				DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */,
 				DC90441327F0B7A900BD7EB6 /* GradientView.swift */,
+				DC90441527F1E3F100BD7EB6 /* Kullanici.swift */,
+				DC90441727F1E95600BD7EB6 /* Yemekler.swift */,
+				DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -451,9 +471,13 @@
 				DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */,
 				DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */,
 				DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */,
+				DC90441827F1E95700BD7EB6 /* Yemekler.swift in Sources */,
 				DC376D4227EC938300B3432C /* SceneDelegate.swift in Sources */,
 				DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */,
 				DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */,
+				DC90441A27F1EBF600BD7EB6 /* YemeklerCevap.swift in Sources */,
+				DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */,
+				DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */,
 				DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */,
 				DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */,
 			);

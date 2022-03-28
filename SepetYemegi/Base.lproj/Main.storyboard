@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -97,6 +98,7 @@
                             <constraint firstItem="8eg-yd-28B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yl1-ZL-58X"/>
                             <constraint firstItem="Psn-QG-RDr" firstAttribute="top" secondItem="gSe-iy-0Zx" secondAttribute="bottom" constant="22" id="ZPA-pW-OHd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEZ-Ky-5ic" secondAttribute="trailing" constant="50" id="cgQ-HX-7Ta"/>
+                            <constraint firstItem="gSe-iy-0Zx" firstAttribute="top" secondItem="L1n-s7-5Da" secondAttribute="bottom" constant="150.5" id="e4Z-1t-xTH"/>
                             <constraint firstAttribute="bottom" secondItem="gSe-iy-0Zx" secondAttribute="bottom" constant="134" id="eLw-21-JW6"/>
                             <constraint firstItem="8eg-yd-28B" firstAttribute="top" secondItem="SEZ-Ky-5ic" secondAttribute="bottom" constant="37.5" id="fcZ-6l-BMC"/>
                             <constraint firstItem="uoH-H4-8H1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="247" id="hLx-Of-TlG"/>
@@ -122,27 +124,12 @@
                         <outlet property="mailTextField" destination="SEZ-Ky-5ic" id="JfD-w7-7fR"/>
                         <outlet property="pwdTextField" destination="8eg-yd-28B" id="2oz-KD-5QL"/>
                         <segue destination="Ek4-ju-OIf" kind="show" identifier="toRegister" id="8ip-LY-qTx"/>
-                        <segue destination="KkQ-DT-ZGP" kind="show" identifier="toUrunler" id="gPn-N1-ygO"/>
+                        <segue destination="1x1-pm-ckl" kind="show" identifier="toUrunler" id="b5w-zB-dzh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
-        </scene>
-        <!--Urunler ScreenVC-->
-        <scene sceneID="V9K-Ry-Pwb">
-            <objects>
-                <viewController id="KkQ-DT-ZGP" customClass="UrunlerScreenVC" customModule="SepetYemegi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LO5-4S-adI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="iIj-f4-vdH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DE1-AC-a0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2075" y="397"/>
         </scene>
         <!--Register-->
         <scene sceneID="lM3-Rd-9of">
@@ -213,6 +200,106 @@
             </objects>
             <point key="canvasLocation" x="939" y="771"/>
         </scene>
+        <!--Urunler ScreenVC-->
+        <scene sceneID="dYv-zW-ecz">
+            <objects>
+                <viewController id="1x1-pm-ckl" customClass="UrunlerScreenVC" customModule="SepetYemegi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OIW-Kh-BDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-IA-LLR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ddJ-dY-wkh">
+                                    <size key="itemSize" width="130" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="yemekHucre" id="8vh-NG-k4I" customClass="YemeklerCollectionViewCell" customModule="SepetYemegi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C2M-Y6-AJT">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="izgarasomon" translatesAutoresizingMaskIntoConstraints="NO" id="PQG-dZ-yGV">
+                                                    <rect key="frame" x="-63" y="10" width="256" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="BFd-GJ-pOv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61w-yO-Mgp">
+                                                    <rect key="frame" x="13" y="118" width="104.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzm-QY-Aca">
+                                                    <rect key="frame" x="44" y="144" width="42" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkN-4R-v6B">
+                                                    <rect key="frame" x="15" y="166" width="100" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="mtS-OR-c7S"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE">
+                                                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                        <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="sepeteEkleButton:" destination="8vh-NG-k4I" eventType="touchUpInside" id="2zC-o2-4zV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kzm-QY-Aca" firstAttribute="top" secondItem="61w-yO-Mgp" secondAttribute="bottom" constant="5" id="I43-Pn-YUR"/>
+                                                <constraint firstItem="PQG-dZ-yGV" firstAttribute="top" secondItem="C2M-Y6-AJT" secondAttribute="top" constant="10" id="IJn-hf-wbh"/>
+                                                <constraint firstItem="KkN-4R-v6B" firstAttribute="top" secondItem="Kzm-QY-Aca" secondAttribute="bottom" constant="5" id="LST-9d-z6w"/>
+                                                <constraint firstItem="61w-yO-Mgp" firstAttribute="top" secondItem="PQG-dZ-yGV" secondAttribute="bottom" constant="8" symbolic="YES" id="Ocp-69-CZ4"/>
+                                                <constraint firstItem="61w-yO-Mgp" firstAttribute="centerX" secondItem="C2M-Y6-AJT" secondAttribute="centerX" id="Oux-rU-lbI"/>
+                                                <constraint firstItem="Kzm-QY-Aca" firstAttribute="centerX" secondItem="C2M-Y6-AJT" secondAttribute="centerX" id="hAq-7f-mic"/>
+                                                <constraint firstItem="PQG-dZ-yGV" firstAttribute="centerX" secondItem="C2M-Y6-AJT" secondAttribute="centerX" id="vWM-oM-IWm"/>
+                                                <constraint firstItem="KkN-4R-v6B" firstAttribute="centerX" secondItem="C2M-Y6-AJT" secondAttribute="centerX" id="ymH-L1-eu3"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="yemekAdiLabel" destination="61w-yO-Mgp" id="bSy-5L-fg1"/>
+                                            <outlet property="yemekFiyatLabel" destination="Kzm-QY-Aca" id="QwN-0R-JC2"/>
+                                            <outlet property="yemekImageView" destination="PQG-dZ-yGV" id="W8F-6V-VGb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qAB-jq-cVI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qAB-jq-cVI" firstAttribute="bottom" secondItem="BY6-IA-LLR" secondAttribute="bottom" id="3bf-e7-SAd"/>
+                            <constraint firstItem="BY6-IA-LLR" firstAttribute="leading" secondItem="qAB-jq-cVI" secondAttribute="leading" id="M4B-Xj-X03"/>
+                            <constraint firstItem="BY6-IA-LLR" firstAttribute="top" secondItem="qAB-jq-cVI" secondAttribute="top" id="VvD-2l-zjI"/>
+                            <constraint firstItem="qAB-jq-cVI" firstAttribute="trailing" secondItem="BY6-IA-LLR" secondAttribute="trailing" id="nUe-aJ-c86"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0f5-di-ap3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="515923 (1)" id="aoX-sE-tde">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="yemeklerCollectionView" destination="BY6-IA-LLR" id="Szv-Or-MHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a99-t8-frW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2074" y="506"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Nt-wQ-0vX">
             <objects>
@@ -233,12 +320,23 @@
         </scene>
     </scenes>
     <resources>
+        <image name="515923 (1)" width="50" height="50"/>
         <image name="Food Basket" width="1080" height="1080"/>
+        <image name="izgarasomon" width="256" height="256"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
