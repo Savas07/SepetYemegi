@@ -22,6 +22,11 @@
 		DC376D7927EC9A3E00B3432C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7827EC9A3E00B3432C /* Kingfisher */; };
 		DC376D7B27EC9ACD00B3432C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */; };
 		DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */; };
+		DC815C2227F35C2700D4A009 /* DetayScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */; };
+		DC815C2627F35C9F00D4A009 /* SepetScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */; };
+		DC815C2927F4C45300D4A009 /* SepetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2827F4C45300D4A009 /* SepetTableViewCell.swift */; };
+		DC815C2B27F5CA5300D4A009 /* SepetYemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2A27F5CA5300D4A009 /* SepetYemekler.swift */; };
+		DC815C2D27F5CBB900D4A009 /* SepetYemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2C27F5CBB900D4A009 /* SepetYemeklerCevap.swift */; };
 		DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */; };
 		DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441327F0B7A900BD7EB6 /* GradientView.swift */; };
 		DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441527F1E3F100BD7EB6 /* Kullanici.swift */; };
@@ -65,6 +70,11 @@
 		DC376D6227EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayScreenVC.swift; sourceTree = "<group>"; };
+		DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetScreenVC.swift; sourceTree = "<group>"; };
+		DC815C2827F4C45300D4A009 /* SepetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetTableViewCell.swift; sourceTree = "<group>"; };
+		DC815C2A27F5CA5300D4A009 /* SepetYemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemekler.swift; sourceTree = "<group>"; };
+		DC815C2C27F5CBB900D4A009 /* SepetYemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemeklerCevap.swift; sourceTree = "<group>"; };
 		DC90440B27F0AB9600BD7EB6 /* UrunlerScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerScreenVC.swift; sourceTree = "<group>"; };
 		DC90441327F0B7A900BD7EB6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DC90441527F1E3F100BD7EB6 /* Kullanici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kullanici.swift; sourceTree = "<group>"; };
@@ -133,6 +143,8 @@
 				DC376D7C27EC9F6700B3432C /* LoginScreen-module */,
 				DCDDC53627EF59460032EAF8 /* RegisterScreen-module */,
 				DC90440D27F0ABAD00BD7EB6 /* UrunlerScreen-module */,
+				DC815C1B27F35BB700D4A009 /* DetayScreen-module */,
+				DC815C2327F35C5C00D4A009 /* SepetScreen-module */,
 				DC376D4827EC938600B3432C /* Assets.xcassets */,
 				DC376D4527EC938300B3432C /* Main.storyboard */,
 				DC376D4A27EC938600B3432C /* LaunchScreen.storyboard */,
@@ -215,6 +227,79 @@
 			path = collectionViewCell;
 			sourceTree = "<group>";
 		};
+		DC815C1B27F35BB700D4A009 /* DetayScreen-module */ = {
+			isa = PBXGroup;
+			children = (
+				DC815C2027F35BFD00D4A009 /* view */,
+				DC815C1F27F35BF600D4A009 /* router */,
+				DC815C1E27F35BDE00D4A009 /* presenter */,
+				DC815C1D27F35BD600D4A009 /* interactor */,
+				DC815C1C27F35BCF00D4A009 /* protocols */,
+			);
+			path = "DetayScreen-module";
+			sourceTree = "<group>";
+		};
+		DC815C1C27F35BCF00D4A009 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DC815C1D27F35BD600D4A009 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		DC815C1E27F35BDE00D4A009 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		DC815C1F27F35BF600D4A009 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		DC815C2027F35BFD00D4A009 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DC815C2327F35C5C00D4A009 /* SepetScreen-module */ = {
+			isa = PBXGroup;
+			children = (
+				DC815C2727F4C42600D4A009 /* tableViewCell */,
+				DC815C2427F35C8900D4A009 /* view */,
+			);
+			path = "SepetScreen-module";
+			sourceTree = "<group>";
+		};
+		DC815C2427F35C8900D4A009 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DC815C2727F4C42600D4A009 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC815C2827F4C45300D4A009 /* SepetTableViewCell.swift */,
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
 		DC90440D27F0ABAD00BD7EB6 /* UrunlerScreen-module */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +358,8 @@
 				DC90441527F1E3F100BD7EB6 /* Kullanici.swift */,
 				DC90441727F1E95600BD7EB6 /* Yemekler.swift */,
 				DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */,
+				DC815C2A27F5CA5300D4A009 /* SepetYemekler.swift */,
+				DC815C2C27F5CBB900D4A009 /* SepetYemeklerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -469,15 +556,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */,
+				DC815C2227F35C2700D4A009 /* DetayScreenVC.swift in Sources */,
 				DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */,
 				DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */,
 				DC90441827F1E95700BD7EB6 /* Yemekler.swift in Sources */,
+				DC815C2D27F5CBB900D4A009 /* SepetYemeklerCevap.swift in Sources */,
 				DC376D4227EC938300B3432C /* SceneDelegate.swift in Sources */,
+				DC815C2927F4C45300D4A009 /* SepetTableViewCell.swift in Sources */,
+				DC815C2627F35C9F00D4A009 /* SepetScreenVC.swift in Sources */,
 				DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */,
 				DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */,
 				DC90441A27F1EBF600BD7EB6 /* YemeklerCevap.swift in Sources */,
 				DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */,
 				DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */,
+				DC815C2B27F5CA5300D4A009 /* SepetYemekler.swift in Sources */,
 				DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */,
 				DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */,
 			);

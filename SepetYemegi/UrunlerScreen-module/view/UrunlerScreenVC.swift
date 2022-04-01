@@ -12,9 +12,9 @@ import Kingfisher
 class UrunlerScreenVC: UIViewController {
 
     @IBOutlet weak var yemeklerCollectionView: UICollectionView!
-    @IBOutlet weak var kullaniciLabel: UILabel!
     var kullaniciAdi:String?
     var yemeklerListe = [Yemekler]()
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +59,14 @@ class UrunlerScreenVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+        ud.set(false, forKey: "signedIn")
+    }
+    @IBAction func sepeteGitButton(_ sender: Any) {
+    }
+    
 
 }
 
@@ -84,8 +92,26 @@ extension UrunlerScreenVC : UICollectionViewDelegate, UICollectionViewDataSource
 //        cell.yemekImageView.image = UIImage(named: yemek.yemek_resim_adi!)
         cell.yemekAdiLabel.text = yemek.yemek_adi
         cell.yemekFiyatLabel.text = "\(yemek.yemek_fiyat!) ₺"
+        cell.yemekResimAd = yemek.yemek_resim_adi
+        
+        cell.layer.borderColor = UIColor.systemGray3.cgColor
+        cell.layer.borderWidth = 0.3
+        cell.layer.cornerRadius = 10
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let yemek = yemeklerListe[indexPath.row]
+        performSegue(withIdentifier: "toDetay", sender: yemek)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay"{
+            let yemek = sender as? Yemekler
+            let gidilecekVC = segue.destination as! DetayScreenVC
+            gidilecekVC.yemek = yemek
+        }
     }
     
     

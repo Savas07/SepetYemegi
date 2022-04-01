@@ -12,11 +12,27 @@ class LoginScreenVC: UIViewController {
     @IBOutlet weak var pwdTextField: MyTextField!
     
     var kullanici:Kullanici?
+//    UserDefaults
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        UserDefault
+        
+        let signedIn = ud.bool(forKey: "signedIn")
+        
+        if signedIn{
+            self.performSegue(withIdentifier: "toUrunler", sender: nil)
+        }else{
+            mailTextField.text = ud.string(forKey: "username")
+        }
+        
         navigationItem.largeTitleDisplayMode = .never
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        pwdTextField.text = ""
     }
 
     @IBAction func loginButton(_ sender: Any) {
@@ -26,9 +42,16 @@ class LoginScreenVC: UIViewController {
                 guard let `self` = self else { return }
                 var message: String = ""
                 if (success) {
+//                    Signed in User Default burada
+                    self.ud.set(true,forKey: "signedIn")
+                    self.ud.set(email,forKey: "username")
+                    
                     message = "User was sucessfully logged in."
+                    
                     self.kullanici?.kullaniciAd = email
+                    
                     self.performSegue(withIdentifier: "toUrunler", sender: nil)
+                    
                 } else {
                     message = "There was an error."
                 }
@@ -50,7 +73,10 @@ class LoginScreenVC: UIViewController {
         if segue.identifier == "toUrunler"{
             
             let controller = segue.destination as! UrunlerScreenVC
-            controller.kullaniciAdi = kullanici?.kullaniciAd
+            
+            controller.kullaniciAdi = ud.string(forKey: "username") //      kullanici?.kullaniciAd
+            
+            
 //            controller.navigationController?.isNavigationBarHidden = true
 //            controller.navigationItem .setHidesBackButton(true, animated: false)
         }
