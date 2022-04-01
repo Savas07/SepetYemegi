@@ -27,9 +27,9 @@ class RegisterScreenVC: UIViewController {
                 guard let `self` = self else {return}
                 var message:String = ""
                 if(success) {
-                    message = "User created!"
+                    message = "Kayıt oluşturuldu!"
                 }else{
-                    message = "There was an error"
+                    message = "Hatalı giriş"
                 }
                 
                 let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)

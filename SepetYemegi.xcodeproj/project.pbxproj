@@ -21,6 +21,10 @@
 		DC376D7627EC998C00B3432C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7527EC998C00B3432C /* Alamofire */; };
 		DC376D7927EC9A3E00B3432C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC376D7827EC9A3E00B3432C /* Kingfisher */; };
 		DC376D7B27EC9ACD00B3432C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */; };
+		DC3786E427F7399B0043C778 /* LoginScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E327F7399B0043C778 /* LoginScreenProtocols.swift */; };
+		DC3786E627F73D220043C778 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E527F73D220043C778 /* LoginInteractor.swift */; };
+		DC3786E827F73E4F0043C778 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E727F73E4F0043C778 /* LoginPresenter.swift */; };
+		DC3786EA27F73EA00043C778 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E927F73EA00043C778 /* LoginRouter.swift */; };
 		DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */; };
 		DC815C2227F35C2700D4A009 /* DetayScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */; };
 		DC815C2627F35C9F00D4A009 /* SepetScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */; };
@@ -69,6 +73,10 @@
 		DC376D6027EC938600B3432C /* SepetYemegiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITests.swift; sourceTree = "<group>"; };
 		DC376D6227EC938600B3432C /* SepetYemegiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemegiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC376D7A27EC9ACD00B3432C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC3786E327F7399B0043C778 /* LoginScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenProtocols.swift; sourceTree = "<group>"; };
+		DC3786E527F73D220043C778 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		DC3786E727F73E4F0043C778 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		DC3786E927F73EA00043C778 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayScreenVC.swift; sourceTree = "<group>"; };
 		DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetScreenVC.swift; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 		DC376D7D27EC9F9400B3432C /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				DC3786E327F7399B0043C778 /* LoginScreenProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 		DC376D7E27EC9FA200B3432C /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				DC3786E527F73D220043C778 /* LoginInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -200,6 +210,7 @@
 		DC376D7F27EC9FAA00B3432C /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DC3786E727F73E4F0043C778 /* LoginPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 		DC376D8027EC9FBA00B3432C /* router */ = {
 			isa = PBXGroup;
 			children = (
+				DC3786E927F73EA00043C778 /* LoginRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -556,8 +568,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */,
+				DC3786E627F73D220043C778 /* LoginInteractor.swift in Sources */,
 				DC815C2227F35C2700D4A009 /* DetayScreenVC.swift in Sources */,
 				DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */,
+				DC3786E827F73E4F0043C778 /* LoginPresenter.swift in Sources */,
+				DC3786EA27F73EA00043C778 /* LoginRouter.swift in Sources */,
 				DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */,
 				DC90441827F1E95700BD7EB6 /* Yemekler.swift in Sources */,
 				DC815C2D27F5CBB900D4A009 /* SepetYemeklerCevap.swift in Sources */,
@@ -568,6 +583,7 @@
 				DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */,
 				DC90441A27F1EBF600BD7EB6 /* YemeklerCevap.swift in Sources */,
 				DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */,
+				DC3786E427F7399B0043C778 /* LoginScreenProtocols.swift in Sources */,
 				DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */,
 				DC815C2B27F5CA5300D4A009 /* SepetYemekler.swift in Sources */,
 				DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */,

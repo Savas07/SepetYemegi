@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cOt-ZE-Hwz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -17,8 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEZ-Ky-5ic" customClass="MyTextField" customModule="SepetYemegi" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEZ-Ky-5ic">
                                 <rect key="frame" x="50" y="388" width="314" height="50"/>
+                                <color key="backgroundColor" name="color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1p6-VX-cRD"/>
                                 </constraints>
@@ -26,27 +28,32 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="yes" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="rightViewMode" value=".always"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="30"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-yd-28B" customClass="MyTextField" customModule="SepetYemegi" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-yd-28B">
                                 <rect key="frame" x="50" y="475.5" width="314" height="50"/>
+                                <color key="backgroundColor" name="color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="H1D-uf-oKA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-s7-5Da">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-s7-5Da">
                                 <rect key="frame" x="50" y="560.5" width="314" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XbO-cj-qGm"/>
                                 </constraints>
+                                <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Giriş Yap">
+                                <buttonConfiguration key="configuration" style="filled" title="Giriş Yap">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="color3"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="50"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2C-Ub-xha"/>
@@ -62,7 +69,7 @@
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food Basket" translatesAutoresizingMaskIntoConstraints="NO" id="1cs-A7-YxA">
                                 <rect key="frame" x="-333" y="98" width="1080" height="300"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <color key="tintColor" name="color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="VLU-cF-z00"/>
                                 </constraints>
@@ -111,10 +118,10 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                <color key="value" systemColor="systemPurpleColor"/>
+                                <color key="value" name="AccentColor"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                <color key="value" systemColor="systemOrangeColor"/>
+                                <color key="value" name="color1"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -134,40 +141,51 @@
         <scene sceneID="lM3-Rd-9of">
             <objects>
                 <viewController id="Ek4-ju-OIf" customClass="RegisterScreenVC" customModule="SepetYemegi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SEE-Fm-otJ">
+                    <view key="view" contentMode="scaleToFill" id="SEE-Fm-otJ" customClass="GradientView" customModule="SepetYemegi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Qc-GjV" customClass="MyTextField" customModule="SepetYemegi" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-Qc-GjV">
                                 <rect key="frame" x="50" y="410.5" width="314" height="50"/>
+                                <color key="backgroundColor" name="color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wVk-vr-t3e"/>
                                 </constraints>
+                                <color key="textColor" name="color3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="yes" smartQuotesType="yes" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="rightViewMode" value=".always"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" name="color3"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPT-UO-2aM" customClass="MyTextField" customModule="SepetYemegi" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPT-UO-2aM">
                                 <rect key="frame" x="50" y="498" width="314" height="50"/>
+                                <color key="backgroundColor" name="color3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JyP-NZ-xZo"/>
                                 </constraints>
+                                <color key="textColor" name="color3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxE-cA-tZh">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxE-cA-tZh">
                                 <rect key="frame" x="50" y="583" width="314" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pRA-WO-DK1"/>
                                 </constraints>
+                                <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Kayıt Ol">
+                                <buttonConfiguration key="configuration" style="filled" title="Kayıt Ol">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="color3"/>
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="50"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Nm-Qe-1BL"/>
@@ -188,6 +206,14 @@
                             <constraint firstItem="hxE-cA-tZh" firstAttribute="leading" secondItem="sa7-Qc-GjV" secondAttribute="leading" id="z0r-OA-odr"/>
                             <constraint firstItem="hxE-cA-tZh" firstAttribute="leading" secondItem="L5h-kz-lbO" secondAttribute="leading" constant="50" id="zF8-dU-gRx"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" name="color1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" name="AccentColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Kayıt ol" largeTitleDisplayMode="always" id="3Vw-9d-4PP"/>
                     <connections>
@@ -199,7 +225,7 @@
             </objects>
             <point key="canvasLocation" x="939" y="771"/>
         </scene>
-        <!--Urunler ScreenVC-->
+        <!--Yemekler-->
         <scene sceneID="dYv-zW-ecz">
             <objects>
                 <viewController id="1x1-pm-ckl" customClass="UrunlerScreenVC" customModule="SepetYemegi" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,7 +235,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-IA-LLR">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ddJ-dY-wkh">
                                     <size key="itemSize" width="130" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -233,13 +259,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61w-yO-Mgp">
                                                     <rect key="frame" x="13" y="118" width="104.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="color3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzm-QY-Aca">
                                                     <rect key="frame" x="44" y="144" width="42" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <color key="textColor" name="color1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkN-4R-v6B">
@@ -250,7 +276,8 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE">
                                                         <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
-                                                        <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="baseBackgroundColor" name="color2"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="sepeteEkleButton:" destination="8vh-NG-k4I" eventType="touchUpInside" id="2zC-o2-4zV"/>
@@ -278,7 +305,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qAB-jq-cVI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="qAB-jq-cVI" firstAttribute="bottom" secondItem="BY6-IA-LLR" secondAttribute="bottom" id="3bf-e7-SAd"/>
                             <constraint firstItem="BY6-IA-LLR" firstAttribute="leading" secondItem="qAB-jq-cVI" secondAttribute="leading" id="M4B-Xj-X03"/>
@@ -286,15 +313,15 @@
                             <constraint firstItem="qAB-jq-cVI" firstAttribute="trailing" secondItem="BY6-IA-LLR" secondAttribute="trailing" id="nUe-aJ-c86"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0f5-di-ap3">
+                    <navigationItem key="navigationItem" title="Yemekler" id="0f5-di-ap3">
                         <barButtonItem key="leftBarButtonItem" title="Logout" image="logout" style="plain" id="Qtt-cA-blb">
-                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <color key="tintColor" name="color2"/>
                             <connections>
                                 <action selector="logoutButton:" destination="1x1-pm-ckl" id="eMU-jl-6WA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="515923 (1)" id="aoX-sE-tde">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" name="color3"/>
                             <connections>
                                 <action selector="sepeteGitButton:" destination="1x1-pm-ckl" id="q8O-zb-HSw"/>
                                 <segue destination="xFG-Xv-p0L" kind="show" identifier="toSepet" id="UGi-n5-Tg7"/>
@@ -320,7 +347,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ECr-R9-C49">
                                 <rect key="frame" x="0.0" y="88" width="414" height="684"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="separatorColor" name="color3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sepetHucre" id="osb-yJ-taC" customClass="SepetTableViewCell" customModule="SepetYemegi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
@@ -338,32 +366,34 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YN-c0-byW">
                                                     <rect key="frame" x="128" y="48" width="120" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="color3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCJ-GM-xaK">
                                                     <rect key="frame" x="128" y="80" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="color2"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adet: 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-Fy-Hs9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet: 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-Fy-Hs9">
                                                     <rect key="frame" x="297" y="51" width="62" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="color1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="m5G-p4-o6W" firstAttribute="centerY" secondItem="KjU-yY-qOA" secondAttribute="centerY" id="O5W-nr-biM"/>
+                                                <constraint firstItem="AYp-Fy-Hs9" firstAttribute="top" secondItem="KjU-yY-qOA" secondAttribute="topMargin" constant="40" id="OxA-iE-aB6"/>
                                                 <constraint firstItem="uCJ-GM-xaK" firstAttribute="leading" secondItem="m5G-p4-o6W" secondAttribute="trailing" constant="8" symbolic="YES" id="R5X-Ap-Ohr"/>
                                                 <constraint firstItem="7YN-c0-byW" firstAttribute="leading" secondItem="m5G-p4-o6W" secondAttribute="trailing" constant="8" symbolic="YES" id="W6l-dR-jEB"/>
                                                 <constraint firstItem="uCJ-GM-xaK" firstAttribute="top" secondItem="7YN-c0-byW" secondAttribute="bottom" constant="8" symbolic="YES" id="bsm-17-6tM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AYp-Fy-Hs9" secondAttribute="trailing" constant="35" id="oBN-lD-zsN"/>
                                                 <constraint firstItem="7YN-c0-byW" firstAttribute="top" secondItem="KjU-yY-qOA" secondAttribute="topMargin" constant="37" id="pCt-LF-kxz"/>
                                                 <constraint firstItem="m5G-p4-o6W" firstAttribute="leading" secondItem="KjU-yY-qOA" secondAttribute="leading" constant="20" symbolic="YES" id="xTU-e6-WEW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <connections>
                                             <outlet property="sepetImageView" destination="m5G-p4-o6W" id="pby-5u-uFM"/>
                                             <outlet property="sepetYemekAd" destination="7YN-c0-byW" id="fLc-4M-sTu"/>
@@ -376,18 +406,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grP-PM-hdQ">
                                 <rect key="frame" x="20" y="794" width="84" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="color3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 ₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-kr-i5k">
-                                <rect key="frame" x="315" y="794" width="79" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-kr-i5k">
+                                <rect key="frame" x="357.5" y="794" width="36.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="color3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pnL-zk-JCo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="pnL-zk-JCo" firstAttribute="bottom" secondItem="ECr-R9-C49" secondAttribute="bottom" constant="90" id="Gid-Hi-j1s"/>
                             <constraint firstItem="ECr-R9-C49" firstAttribute="top" secondItem="pnL-zk-JCo" secondAttribute="top" id="NLc-c6-mrg"/>
@@ -423,13 +453,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-8o-n5w">
                                 <rect key="frame" x="118.5" y="426" width="177" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0 ₺ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-Tp-qUc">
                                 <rect key="frame" x="168.5" y="512" width="77" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="textColor" name="color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfM-aX-eEn">
@@ -437,7 +467,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
-                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                    <color key="baseBackgroundColor" name="color2"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sepeteEkleButton:" destination="TxQ-Vf-00q" eventType="touchUpInside" id="kRF-F6-lAT"/>
@@ -453,12 +483,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbm-Hy-7jd">
                                 <rect key="frame" x="100" y="562" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5JW-y8-BNd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="color3"/>
                         <constraints>
                             <constraint firstItem="TPP-Tp-qUc" firstAttribute="centerX" secondItem="U8X-ii-xdW" secondAttribute="centerX" id="487-Al-stn"/>
                             <constraint firstItem="h0L-8o-n5w" firstAttribute="centerX" secondItem="U8X-ii-xdW" secondAttribute="centerX" id="F8H-XA-Sno"/>
@@ -490,9 +520,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cOt-ZE-Hwz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXt-Lw-9GE">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="HXt-Lw-9GE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="color3"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="color1"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -509,29 +544,20 @@
         <image name="Food Basket" width="1080" height="1080"/>
         <image name="izgarasomon" width="256" height="256"/>
         <image name="logout" width="25" height="25"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.1764705882352941" green="0.25098039215686274" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color1">
+            <color red="0.23921568627450979" green="0.51764705882352935" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color2">
+            <color red="0.27450980392156865" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color3">
+            <color red="1" green="0.83137254901960778" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

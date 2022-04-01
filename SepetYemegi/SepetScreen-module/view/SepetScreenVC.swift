@@ -41,6 +41,13 @@ class SepetScreenVC: UIViewController {
                         
                         self.sepet = gelenListe
                         
+                        var ucret = 0
+                        for i in gelenListe{
+                            ucret += Int(exactly: Int(i.yemek_fiyat!)! * Int(i.yemek_siparis_adet!)!)!
+                            self.totalUcret = ucret
+                            self.toplamUcretLabel.text = "\(self.totalUcret) ₺"
+                        }
+                        
                         DispatchQueue.main.async {
                             self.sepetTableView.reloadData()
                         }
@@ -53,7 +60,7 @@ class SepetScreenVC: UIViewController {
         }
     }
 }
-// Tüm yemekleri silince bug, para sürekli artıyor
+// FIXME: Tüm yemekleri silince bug, para sürekli artıyor
 extension SepetScreenVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         sepet.count
@@ -74,9 +81,7 @@ extension SepetScreenVC: UITableViewDelegate,UITableViewDataSource{
         cell.sepetYemekAd.text = yemek.yemek_adi
         cell.sepetYemekFiyat.text = "\(yemekToplamUcret) ₺"
         cell.sepetYemekAdet.text = "Adet: \(yemek.yemek_siparis_adet!)"
-        self.totalUcret += Int(exactly: yemekToplamUcret)!
         
-        toplamUcretLabel.text = "\(totalUcret) ₺"
         return cell
     }
     

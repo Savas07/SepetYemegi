@@ -20,7 +20,7 @@ class LoginScreenVC: UIViewController {
 //        UserDefault
         
         let signedIn = ud.bool(forKey: "signedIn")
-        
+       //Eğer daha önce giriş yaptıysa direkt yönlendir
         if signedIn{
             self.performSegue(withIdentifier: "toUrunler", sender: nil)
         }else{
@@ -46,18 +46,18 @@ class LoginScreenVC: UIViewController {
                     self.ud.set(true,forKey: "signedIn")
                     self.ud.set(email,forKey: "username")
                     
-                    message = "User was sucessfully logged in."
-                    
                     self.kullanici?.kullaniciAd = email
                     
                     self.performSegue(withIdentifier: "toUrunler", sender: nil)
                     
                 } else {
-                    message = "There was an error."
+                    message = "Hatalı giriş."
+                    
+                    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController,animated: true)
                 }
-                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertController,animated: true)
+                
             }
     }
     
