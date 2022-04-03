@@ -12,14 +12,27 @@ class RegisterScreenVC: UIViewController {
     @IBOutlet weak var mailTextField: MyTextField!
     @IBOutlet weak var pwdTextField: MyTextField!
     
+    var presenter:RegisterViewToPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
 
-        // Do any additional setup after loading the view.
+        RegisterRouter.createModule(ref: self)
+//      Placeholder renkleri
+        mailTextField.attributedPlaceholder = NSAttributedString(
+            string: "Mail",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        pwdTextField.attributedPlaceholder = NSAttributedString(
+            string: "Şifre",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     
     @IBAction func registerButton(_ sender: Any) {
+
+        presenter?.kayitOl(email: mailTextField.text, password: pwdTextField.text)
+
+/*
         let signUpManager = FireBaseAuthManager()
         
         if let email = mailTextField.text, let password = pwdTextField.text {
@@ -37,7 +50,15 @@ class RegisterScreenVC: UIViewController {
                 self.present(alertController, animated: true)
             }
         }
+        */
+        
     }
     
 
+}
+
+extension RegisterScreenVC:RegisterPresenterToViewProtocol{
+    func presentAlert(alertController: UIAlertController) {
+        self.present(alertController, animated: true)
+    }
 }

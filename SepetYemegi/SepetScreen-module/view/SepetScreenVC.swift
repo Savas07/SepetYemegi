@@ -15,63 +15,47 @@ class SepetScreenVC: UIViewController {
     var sepet = [SepetYemekler]()
     let ud = UserDefaults.standard
     var totalUcret:Int = 0
-    
+//    presenter nesnesi
+    var presenter:SepetViewToPresenterProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         sepetTableView.delegate = self
         sepetTableView.dataSource = self
-        
-        sepetiAl()
-        
-        
+
+        SepetRouter.createModule(ref: self)
+       presenter?.sepetiAl()
 
     }
-    
-    func sepetiAl(){
-        
-        let params:Parameters = ["kullanici_adi": ud.string(forKey: "username")!]
-        
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: params).response{response in
-            
-            if let data = response.data {
-                do{
-                    let cevap = try JSONDecoder().decode(SepetYemeklerCevap.self, from: data)
-                    
-                    if let gelenListe = cevap.sepet_yemekler{
-                        
-                        self.sepet = gelenListe
-                        
-                        var ucret = 0
-                        for i in gelenListe{
-                            ucret += Int(exactly: Int(i.yemek_fiyat!)! * Int(i.yemek_siparis_adet!)!)!
-                            self.totalUcret = ucret
-                            self.toplamUcretLabel.text = "\(self.totalUcret) ₺"
-                        }
-                        
-                        DispatchQueue.main.async {
-                            self.sepetTableView.reloadData()
-                        }
-                    }
-                }catch{
-                    print("Post metod da hata")
-                    print(String(describing: error))
-                }
-            }
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.sepetiAl()
     }
 }
-// FIXME: Tüm yemekleri silince bug, para sürekli artıyor
+
+extension SepetScreenVC:SepetPresenterToViewProtocol{
+    func vieweVeriGonder(sepetListe: Array<SepetYemekler>) {
+        self.sepet = sepetListe
+        DispatchQueue.main.async {
+            self.sepetTableView.reloadData()
+        }
+    }
+
+    func vieweUcretGonder(totalUcret: Int?) {
+        self.totalUcret = totalUcret!
+        self.toplamUcretLabel.text = "\(self.totalUcret) ₺"
+    }
+}
+
 extension SepetScreenVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        sepet.count
+        return sepet.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let yemek = sepet[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "sepetHucre", for: indexPath) as! SepetTableViewCell
         
-//        Kingfisher Burada Kullanılacak
+//      TODO:  Kingfisher Burada Kullanılacak
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(yemek.yemek_resim_adi!)"){
             DispatchQueue.main.async {
                 cell.sepetImageView.kf.setImage(with:url)
@@ -97,29 +81,27 @@ extension SepetScreenVC: UITableViewDelegate,UITableViewDataSource{
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
-//                MARK: silme işlemi
-                
                 let params:Parameters = ["sepet_yemek_id":yemek.sepet_yemek_id!,"kullanici_adi":self.ud.string(forKey: "username")!]
-                
-                AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: params).response{response in
-                    if let data = response.data{
-                        do{
-                            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
-                                print(json)
-                            }
-                        }catch{
-                            print("post metod da hata")
-                            print(String(describing: error))
-                        }
-                    }
-                }
+//                MARK: Yemeksil komutu buraya
+                self.presenter?.yemekSil(params: params)
 //              Table da ki öğeleri yenileme
-                self.sepetiAl()
+//               MARK: silme işlemi
+                if(self.sepet.count != 1){
+                    self.sepet.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+//                    self.sepetiAl()
+                    self.presenter?.sepetiAl()
+                    print("sepet yenilendi")
+                }else{
+                    self.toplamUcretLabel.text = String(0)
+                    self.sepet.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                    print("son eleman silindi")
+                }
             }
             alert.addAction(evetAction)
             self.present(alert, animated: true)
         }
-        
         return UISwipeActionsConfiguration(actions: [silAction])
     }
     

@@ -9,6 +9,15 @@ import Foundation
 
 class LoginRouter:LoginPresenterToRouterProtocol{
     static func createModule(ref: LoginScreenVC) {
-        <#code#>
+        let presenter = LoginPresenter()
+        
+//      view
+        ref.presenter = presenter
+//      presenter
+        ref.presenter?.interactorNesnesi = LoginInteractor()
+        ref.presenter?.view = ref
+//      Interactor
+        ref.presenter?.interactorNesnesi?.presenter = presenter
+        
     }
 }

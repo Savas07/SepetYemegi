@@ -12,12 +12,15 @@ class LoginScreenVC: UIViewController {
     @IBOutlet weak var pwdTextField: MyTextField!
     
     var kullanici:Kullanici?
+//  presenter nesnesi
+    var presenter:LoginViewToPresenterProtocol?
 //    UserDefaults
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        UserDefault
+        LoginRouter.createModule(ref: self)
         
         let signedIn = ud.bool(forKey: "signedIn")
        //Eğer daha önce giriş yaptıysa direkt yönlendir
@@ -28,7 +31,14 @@ class LoginScreenVC: UIViewController {
         }
         
         navigationItem.largeTitleDisplayMode = .never
-        // Do any additional setup after loading the view.
+//      Textfield placeholder color
+        mailTextField.attributedPlaceholder = NSAttributedString(
+            string: "Mail",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        pwdTextField.attributedPlaceholder = NSAttributedString(
+            string: "Şifre",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +46,9 @@ class LoginScreenVC: UIViewController {
     }
 
     @IBAction func loginButton(_ sender: Any) {
+        presenter?.giris(email: mailTextField.text, password: pwdTextField.text)
+        
+        /*
         let loginManager = FireBaseAuthManager()
             guard let email = mailTextField.text, let password = pwdTextField.text else { return }
             loginManager.signIn(email: email, pass: password) {[weak self] (success) in
@@ -58,7 +71,7 @@ class LoginScreenVC: UIViewController {
                     self.present(alertController,animated: true)
                 }
                 
-            }
+            } */
     }
     
     @IBAction func registerButton(_ sender: Any) {
@@ -86,3 +99,15 @@ class LoginScreenVC: UIViewController {
     
 }
 
+extension LoginScreenVC:LoginPresenterToViewProtocol{
+    func presentAlert(alertController: UIAlertController) {
+        self.present(alertController,animated: true)
+    }
+    
+    func setKullanici(email: String?) {
+        self.kullanici?.kullaniciAd = email
+        performSegue(withIdentifier: "toUrunler", sender: nil)
+    }
+    
+    
+}

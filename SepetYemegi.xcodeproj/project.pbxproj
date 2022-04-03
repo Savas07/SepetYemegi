@@ -25,6 +25,23 @@
 		DC3786E627F73D220043C778 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E527F73D220043C778 /* LoginInteractor.swift */; };
 		DC3786E827F73E4F0043C778 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E727F73E4F0043C778 /* LoginPresenter.swift */; };
 		DC3786EA27F73EA00043C778 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786E927F73EA00043C778 /* LoginRouter.swift */; };
+		DC3786EC27F87BA60043C778 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3786EB27F87BA60043C778 /* MyTextField.swift */; };
+		DC7AC3C127F9DC4E005B444D /* RegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3C027F9DC4E005B444D /* RegisterProtocols.swift */; };
+		DC7AC3C327F9DC68005B444D /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3C227F9DC68005B444D /* RegisterRouter.swift */; };
+		DC7AC3C527F9DC7C005B444D /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3C427F9DC7C005B444D /* RegisterPresenter.swift */; };
+		DC7AC3C727F9DC93005B444D /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3C627F9DC93005B444D /* RegisterInteractor.swift */; };
+		DC7AC3C927F9E4E0005B444D /* UrunlerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3C827F9E4E0005B444D /* UrunlerInteractor.swift */; };
+		DC7AC3CB27F9E4F3005B444D /* UrunlerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3CA27F9E4F3005B444D /* UrunlerRouter.swift */; };
+		DC7AC3CD27F9E512005B444D /* UrunlerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3CC27F9E512005B444D /* UrunlerPresenter.swift */; };
+		DC7AC3CF27F9E523005B444D /* UrunlerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3CE27F9E523005B444D /* UrunlerProtocols.swift */; };
+		DC7AC3D127FA0199005B444D /* DetayScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3D027FA0199005B444D /* DetayScreenProtocols.swift */; };
+		DC7AC3D327FA0475005B444D /* DetayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3D227FA0475005B444D /* DetayInteractor.swift */; };
+		DC7AC3D527FA0498005B444D /* DetayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3D427FA0498005B444D /* DetayPresenter.swift */; };
+		DC7AC3D727FA04B8005B444D /* DetayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3D627FA04B8005B444D /* DetayRouter.swift */; };
+		DC7AC3DE27FA0D0B005B444D /* SepetScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3DD27FA0D0B005B444D /* SepetScreenProtocols.swift */; };
+		DC7AC3E027FA1174005B444D /* SepetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3DF27FA1174005B444D /* SepetInteractor.swift */; };
+		DC7AC3E227FA118E005B444D /* SepetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3E127FA118E005B444D /* SepetPresenter.swift */; };
+		DC7AC3E427FA11A3005B444D /* SepetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7AC3E327FA11A3005B444D /* SepetRouter.swift */; };
 		DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */; };
 		DC815C2227F35C2700D4A009 /* DetayScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */; };
 		DC815C2627F35C9F00D4A009 /* SepetScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */; };
@@ -36,7 +53,6 @@
 		DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441527F1E3F100BD7EB6 /* Kullanici.swift */; };
 		DC90441827F1E95700BD7EB6 /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441727F1E95600BD7EB6 /* Yemekler.swift */; };
 		DC90441A27F1EBF600BD7EB6 /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */; };
-		DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC52F27EE26090032EAF8 /* MyTextField.swift */; };
 		DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */; };
 		DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +93,23 @@
 		DC3786E527F73D220043C778 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		DC3786E727F73E4F0043C778 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		DC3786E927F73EA00043C778 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		DC3786EB27F87BA60043C778 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		DC7AC3C027F9DC4E005B444D /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
+		DC7AC3C227F9DC68005B444D /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		DC7AC3C427F9DC7C005B444D /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		DC7AC3C627F9DC93005B444D /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		DC7AC3C827F9E4E0005B444D /* UrunlerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerInteractor.swift; sourceTree = "<group>"; };
+		DC7AC3CA27F9E4F3005B444D /* UrunlerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerRouter.swift; sourceTree = "<group>"; };
+		DC7AC3CC27F9E512005B444D /* UrunlerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerPresenter.swift; sourceTree = "<group>"; };
+		DC7AC3CE27F9E523005B444D /* UrunlerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerProtocols.swift; sourceTree = "<group>"; };
+		DC7AC3D027FA0199005B444D /* DetayScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayScreenProtocols.swift; sourceTree = "<group>"; };
+		DC7AC3D227FA0475005B444D /* DetayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayInteractor.swift; sourceTree = "<group>"; };
+		DC7AC3D427FA0498005B444D /* DetayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayPresenter.swift; sourceTree = "<group>"; };
+		DC7AC3D627FA04B8005B444D /* DetayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayRouter.swift; sourceTree = "<group>"; };
+		DC7AC3DD27FA0D0B005B444D /* SepetScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetScreenProtocols.swift; sourceTree = "<group>"; };
+		DC7AC3DF27FA1174005B444D /* SepetInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetInteractor.swift; sourceTree = "<group>"; };
+		DC7AC3E127FA118E005B444D /* SepetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetPresenter.swift; sourceTree = "<group>"; };
+		DC7AC3E327FA11A3005B444D /* SepetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetRouter.swift; sourceTree = "<group>"; };
 		DC815C1427F1F52500D4A009 /* YemeklerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC815C2127F35C2700D4A009 /* DetayScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayScreenVC.swift; sourceTree = "<group>"; };
 		DC815C2527F35C9F00D4A009 /* SepetScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetScreenVC.swift; sourceTree = "<group>"; };
@@ -88,7 +121,6 @@
 		DC90441527F1E3F100BD7EB6 /* Kullanici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kullanici.swift; sourceTree = "<group>"; };
 		DC90441727F1E95600BD7EB6 /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 		DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
-		DCDDC52F27EE26090032EAF8 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		DCDDC53427EF587E0032EAF8 /* RegisterScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +263,38 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		DC7AC3D827FA0CA3005B444D /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DC7AC3DD27FA0D0B005B444D /* SepetScreenProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		DC7AC3D927FA0CB7005B444D /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DC7AC3DF27FA1174005B444D /* SepetInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		DC7AC3DA27FA0CC2005B444D /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DC7AC3E127FA118E005B444D /* SepetPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		DC7AC3DB27FA0CC8005B444D /* router */ = {
+			isa = PBXGroup;
+			children = (
+				DC7AC3E327FA11A3005B444D /* SepetRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		DC815C1327F1F50D00D4A009 /* collectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +318,7 @@
 		DC815C1C27F35BCF00D4A009 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3D027FA0199005B444D /* DetayScreenProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -261,6 +326,7 @@
 		DC815C1D27F35BD600D4A009 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3D227FA0475005B444D /* DetayInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -268,6 +334,7 @@
 		DC815C1E27F35BDE00D4A009 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3D427FA0498005B444D /* DetayPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -275,6 +342,7 @@
 		DC815C1F27F35BF600D4A009 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3D627FA04B8005B444D /* DetayRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -292,6 +360,10 @@
 			children = (
 				DC815C2727F4C42600D4A009 /* tableViewCell */,
 				DC815C2427F35C8900D4A009 /* view */,
+				DC7AC3DB27FA0CC8005B444D /* router */,
+				DC7AC3DA27FA0CC2005B444D /* presenter */,
+				DC7AC3D927FA0CB7005B444D /* interactor */,
+				DC7AC3D827FA0CA3005B444D /* protocols */,
 			);
 			path = "SepetScreen-module";
 			sourceTree = "<group>";
@@ -328,6 +400,7 @@
 		DC90440E27F0ABBB00BD7EB6 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3CE27F9E523005B444D /* UrunlerProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -335,6 +408,7 @@
 		DC90440F27F0ABC100BD7EB6 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3CC27F9E512005B444D /* UrunlerPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -342,6 +416,7 @@
 		DC90441027F0ABCB00BD7EB6 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3CA27F9E4F3005B444D /* UrunlerRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -349,6 +424,7 @@
 		DC90441127F0ABD100BD7EB6 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3C827F9E4E0005B444D /* UrunlerInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -364,7 +440,6 @@
 		DCDDC53127EF534B0032EAF8 /* entity */ = {
 			isa = PBXGroup;
 			children = (
-				DCDDC52F27EE26090032EAF8 /* MyTextField.swift */,
 				DCDDC53227EF53770032EAF8 /* FirebaseAuthManager.swift */,
 				DC90441327F0B7A900BD7EB6 /* GradientView.swift */,
 				DC90441527F1E3F100BD7EB6 /* Kullanici.swift */,
@@ -372,6 +447,7 @@
 				DC90441927F1EBF600BD7EB6 /* YemeklerCevap.swift */,
 				DC815C2A27F5CA5300D4A009 /* SepetYemekler.swift */,
 				DC815C2C27F5CBB900D4A009 /* SepetYemeklerCevap.swift */,
+				DC3786EB27F87BA60043C778 /* MyTextField.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -391,6 +467,7 @@
 		DCDDC53727EF5A6F0032EAF8 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3C627F9DC93005B444D /* RegisterInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -398,6 +475,7 @@
 		DCDDC53827EF5A7C0032EAF8 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3C427F9DC7C005B444D /* RegisterPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -405,6 +483,7 @@
 		DCDDC53927EF5A850032EAF8 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3C227F9DC68005B444D /* RegisterRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -420,6 +499,7 @@
 		DCDDC53B27EF5A990032EAF8 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				DC7AC3C027F9DC4E005B444D /* RegisterProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -567,27 +647,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7AC3E227FA118E005B444D /* SepetPresenter.swift in Sources */,
 				DC376D4427EC938300B3432C /* LoginScreenVC.swift in Sources */,
+				DC7AC3E027FA1174005B444D /* SepetInteractor.swift in Sources */,
 				DC3786E627F73D220043C778 /* LoginInteractor.swift in Sources */,
 				DC815C2227F35C2700D4A009 /* DetayScreenVC.swift in Sources */,
 				DC376D4027EC938300B3432C /* AppDelegate.swift in Sources */,
+				DC7AC3C927F9E4E0005B444D /* UrunlerInteractor.swift in Sources */,
 				DC3786E827F73E4F0043C778 /* LoginPresenter.swift in Sources */,
 				DC3786EA27F73EA00043C778 /* LoginRouter.swift in Sources */,
 				DC90440C27F0AB9600BD7EB6 /* UrunlerScreenVC.swift in Sources */,
+				DC7AC3C527F9DC7C005B444D /* RegisterPresenter.swift in Sources */,
 				DC90441827F1E95700BD7EB6 /* Yemekler.swift in Sources */,
 				DC815C2D27F5CBB900D4A009 /* SepetYemeklerCevap.swift in Sources */,
 				DC376D4227EC938300B3432C /* SceneDelegate.swift in Sources */,
 				DC815C2927F4C45300D4A009 /* SepetTableViewCell.swift in Sources */,
 				DC815C2627F35C9F00D4A009 /* SepetScreenVC.swift in Sources */,
-				DCDDC53027EE26090032EAF8 /* MyTextField.swift in Sources */,
+				DC7AC3CD27F9E512005B444D /* UrunlerPresenter.swift in Sources */,
+				DC7AC3C127F9DC4E005B444D /* RegisterProtocols.swift in Sources */,
 				DCDDC53327EF53770032EAF8 /* FirebaseAuthManager.swift in Sources */,
+				DC7AC3CB27F9E4F3005B444D /* UrunlerRouter.swift in Sources */,
 				DC90441A27F1EBF600BD7EB6 /* YemeklerCevap.swift in Sources */,
+				DC7AC3CF27F9E523005B444D /* UrunlerProtocols.swift in Sources */,
 				DC815C1527F1F52500D4A009 /* YemeklerCollectionViewCell.swift in Sources */,
+				DC7AC3E427FA11A3005B444D /* SepetRouter.swift in Sources */,
+				DC3786EC27F87BA60043C778 /* MyTextField.swift in Sources */,
+				DC7AC3D327FA0475005B444D /* DetayInteractor.swift in Sources */,
 				DC3786E427F7399B0043C778 /* LoginScreenProtocols.swift in Sources */,
+				DC7AC3D127FA0199005B444D /* DetayScreenProtocols.swift in Sources */,
+				DC7AC3DE27FA0D0B005B444D /* SepetScreenProtocols.swift in Sources */,
 				DC90441627F1E3F100BD7EB6 /* Kullanici.swift in Sources */,
 				DC815C2B27F5CA5300D4A009 /* SepetYemekler.swift in Sources */,
+				DC7AC3C727F9DC93005B444D /* RegisterInteractor.swift in Sources */,
+				DC7AC3C327F9DC68005B444D /* RegisterRouter.swift in Sources */,
 				DC90441427F0B7A900BD7EB6 /* GradientView.swift in Sources */,
+				DC7AC3D527FA0498005B444D /* DetayPresenter.swift in Sources */,
 				DCDDC53527EF587E0032EAF8 /* RegisterScreenVC.swift in Sources */,
+				DC7AC3D727FA04B8005B444D /* DetayRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

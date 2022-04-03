@@ -15,15 +15,19 @@ class YemeklerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var yemekFiyatLabel: UILabel!
     var yemekResimAd:String?
     let ud = UserDefaults.standard
+
+
     
     @IBAction func sepeteEkleButton(_ sender: Any) {
         var yemekFiyat = yemekFiyatLabel.text!
         yemekFiyat.removeLast()
         yemekFiyat = yemekFiyat.trimmingCharacters(in: .whitespacesAndNewlines)
         let yemekFiyatInt = Int(yemekFiyat)
-        
+
         let params:Parameters = ["yemek_adi":yemekAdiLabel.text!,"yemek_resim_adi":yemekResimAd!,"yemek_fiyat":yemekFiyatInt!,"kullanici_adi": ud.string(forKey: "username")!,"yemek_siparis_adet":1]
-        
+//      Sepete ekleme komutu
+
+
         AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php", method: .post, parameters: params).response{response in
             print("\(self.yemekAdiLabel.text!) sepete eklendi")
             
@@ -44,7 +48,7 @@ class YemeklerCollectionViewCell: UICollectionViewCell {
         let tamamAction = UIAlertAction(title: "Tamam", style: .destructive)
         alertController.addAction(tamamAction)
         
-//
+
         
     }
 }

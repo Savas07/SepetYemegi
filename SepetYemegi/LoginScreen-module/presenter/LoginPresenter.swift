@@ -6,13 +6,24 @@
 //
 
 import Foundation
+import UIKit
 
 class LoginPresenter:LoginViewToPresenterProtocol{
+    var view: LoginPresenterToViewProtocol?
+    
     var interactorNesnesi: LoginPresenterToInteractorProtocol?
     
-    func giris() {
-        interactorNesnesi?.girisYap()
+    func giris(email: String?, password: String?) {
+        interactorNesnesi?.girisYap(email: email, password: password)
+    }
+}
+
+extension LoginPresenter:LoginInteractorToPresenterProtocol{
+    func presentAlert(alertController: UIAlertController) {
+        view?.presentAlert(alertController: alertController)
     }
     
-    
+    func setKullanici(email: String?) {
+        view?.setKullanici(email: email)
+    }  
 }

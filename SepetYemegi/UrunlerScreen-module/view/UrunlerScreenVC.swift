@@ -15,13 +15,17 @@ class UrunlerScreenVC: UIViewController {
     var kullaniciAdi:String?
     var yemeklerListe = [Yemekler]()
     let ud = UserDefaults.standard
+    var presenter:UrunlerViewToPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         yemeklerCollectionView.delegate = self
         yemeklerCollectionView.dataSource = self
-        
-        tumYemekleriAl()
+
+        UrunlerRouter.createModule(ref: self)
+//      FIXME: yemekleri al
+//        presenter?.yemekleriAl()
+//        tumYemekleriAl()
         
         
         
@@ -36,7 +40,10 @@ class UrunlerScreenVC: UIViewController {
         yemeklerCollectionView?.collectionViewLayout = tasarim
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.yemekleriAl()
+    }
+    /*
     func tumYemekleriAl(){
         AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php", method: .get).response{response in
             
@@ -58,7 +65,7 @@ class UrunlerScreenVC: UIViewController {
                 }
             }
         }
-    }
+    } */
     
     @IBAction func logoutButton(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
@@ -115,4 +122,13 @@ extension UrunlerScreenVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     
+}
+
+extension UrunlerScreenVC:UrunlerPresenterToViewProtocol{
+    func vieweVeriGonder(yemeklerListe: Array<Yemekler>) {
+        self.yemeklerListe = yemeklerListe
+        DispatchQueue.main.async {
+            self.yemeklerCollectionView.reloadData()
+        }
+    }
 }

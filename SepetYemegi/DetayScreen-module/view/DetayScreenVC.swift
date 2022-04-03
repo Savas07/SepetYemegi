@@ -20,12 +20,14 @@ class DetayScreenVC: UIViewController {
 //    Seçilen yemek objesi
     var yemek:Yemekler?
     var secilenAdet:Int = 1
+//  presenter nesnesi
+    var presenter:DetayViewToPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         adetPicker.dataSource = self
         adetPicker.delegate = self
-        
+        DetayRouter.createModule(ref: self)
         
 //        Tıklanan yemek objesinin özelliklerinin detay view da gösterilmesi
         if let y = yemek {
@@ -48,7 +50,9 @@ class DetayScreenVC: UIViewController {
         if let y = yemek{
 //      MARK: post gönder
             let params:Parameters = ["yemek_adi":y.yemek_adi!,"yemek_resim_adi":y.yemek_resim_adi!,"yemek_fiyat":Int(y.yemek_fiyat!)!,"kullanici_adi": ud.string(forKey: "username")!,"yemek_siparis_adet":self.secilenAdet]
-            
+
+            presenter?.sepeteEkleButton(params: params)
+            /*
             AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php", method: .post, parameters: params).response{response in
                 
                 if let data = response.data{
@@ -61,7 +65,7 @@ class DetayScreenVC: UIViewController {
                         print(String(describing: error))
                     }
                 }
-            }
+            } */
         }
     }
     
