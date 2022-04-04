@@ -101,7 +101,7 @@ extension UrunlerScreenVC : UICollectionViewDelegate, UICollectionViewDataSource
         cell.yemekFiyatLabel.text = "\(yemek.yemek_fiyat!) ₺"
         cell.yemekResimAd = yemek.yemek_resim_adi
         
-        cell.layer.borderColor = UIColor.systemGray3.cgColor
+        cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.3
         cell.layer.cornerRadius = 10
         
